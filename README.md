@@ -1,16 +1,56 @@
-# React + Vite
+# BlockMind AI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**BlockMind AI** is a Secure Enterprise RAG (Retrieval-Augmented Generation) Chatbot designed to act as a Blockchain Domain Expert. Built with React and Vite, the application utilizes the Google Generative AI API to accurately answer questions related to blockchain technology based on its internal knowledge base.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Blockchain Domain Expert:** Provides accurate and structured answers to your blockchain-related queries.
+- **RAG Architecture:** Leverages a Retrieval-Augmented Generation approach to find contextually relevant information before generating a response.
+- **Real-time Streaming:** Streams AI responses token-by-token for a fast, interactive chat experience.
+- **Structured Explanations:** Automatically formats responses into four clear sections:
+  - Definition
+  - Technical Explanation
+  - Example
+  - Security / Limitations
+- **Modern UI/UX:** A clean, responsive chat interface showcasing dynamic conversation flows, loading states, and embedded `lucide-react` icons.
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend Framework:** React 19, Vite
+- **AI Integration:** `@google/generative-ai` (Google Gemini API)
+- **Icons:** `lucide-react`
+- **Other Utilities:** `string-similarity` for RAG matching algorithms.
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- Node.js (v18 or higher recommended)
+- A valid Google Gemini API Key
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Arun597134/LLM-Workshop.git
+   cd LLM-Workshop
+   ```
+*(Note: If you are already inside the cloned project, switch to the `blockmind-ai` directory!)*
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Set up environment variables:
+   Create a `.env` file in the root of your project directory and add your Gemini API Key:
+   ```env
+   VITE_GEMINI_API_KEY="your_actual_api_key_here"
+   ```
+
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+5. Open your browser and navigate to the local URL provided by Vite (usually `http://localhost:5173`) to start chatting with BlockMind AI!
